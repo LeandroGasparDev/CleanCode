@@ -10,4 +10,22 @@ object frmprincipal: Tfrmprincipal
   Font.Name = 'Segoe UI'
   Font.Style = []
   TextHeight = 15
+  object BitBtn1: TBitBtn
+    Left = 16
+    Top = 8
+    Width = 145
+    Height = 25
+    Caption = 'interface Arquivo'
+    TabOrder = 0
+    OnClick = BitBtn1Click
+  end
+  object BitBtn2: TBitBtn
+    Left = 16
+    Top = 224
+    Width = 75
+    Height = 25
+    Caption = 'Ventilador'
+    TabOrder = 1
+    OnClick = BitBtn2Click
+  end
 end

@@ -3,48 +3,74 @@ unit uClassTArquivo;
 interface
 
 type
-  TGerarArquivo = class
+  iArquivo = interface
+    ['{921592E0-2711-4AA5-A31B-05BC8D7002D9}']
+    function GerarArquivo: Boolean;
+  end;
+
+  TGerarArquivo = class(TInterfacedObject, iArquivo)
   public
     function GerarArquivo: Boolean; virtual; abstract;
   end;
 
-  TGerarArquivoPDF = class
-  public
+  TGerarAquivoPDF = class(TGerarArquivo)
     function GerarArquivo: Boolean;
   end;
 
-  TGerarArquivoTXT = class
-  public
+  TGerarAquivoTXT = class(TGerarArquivo)
     function GerarArquivo: Boolean;
   end;
 
-  TGerarArquivoXLS = class
-  public
+  TGerarAquivoXLS = class(TGerarArquivo)
+    function GerarArquivo: Boolean;
+  end;
+
+  TGerarAquivoXML = class(TGerarArquivo)
+    function GerarArquivo: Boolean;
+  end;
+
+  TGerarAquivoJSON = class(TGerarArquivo)
     function GerarArquivo: Boolean;
   end;
 
 
 implementation
 
-{ TGerarArquivoPDF }
 
-function TGerarArquivoPDF.GerarArquivo: Boolean;
+
+{ TGerarAquivoPDF }
+
+function TGerarAquivoPDF.GerarArquivo: Boolean;
 begin
-  Result := True;
+//
 end;
 
-{ TGerarArquivoTXT }
+{ TGerarAquivoTXT }
 
-function TGerarArquivoTXT.GerarArquivo: Boolean;
+function TGerarAquivoTXT.GerarArquivo: Boolean;
 begin
-  Result := True;
+//
 end;
 
-{ TGerarArquivoXLS }
+{ TGerarAquivoXLS }
 
-function TGerarArquivoXLS.GerarArquivo: Boolean;
+function TGerarAquivoXLS.GerarArquivo: Boolean;
 begin
-  Result := True;
+//
+end;
+
+{ TGerarAquivoXML }
+
+function TGerarAquivoXML.GerarArquivo: Boolean;
+begin
+//
+end;
+
+{ TGerarAquivoJSON }
+
+function TGerarAquivoJSON.GerarArquivo: Boolean;
+begin
+//
 end;
 
 end.
